@@ -1,0 +1,151 @@
+body {
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 1.5;
+  }
+  
+  ol {
+    padding: 0 2rem;
+  }
+  
+  li {
+    margin: 1rem;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .correct {
+    border: 3px solid green;
+    pointer-events: none;
+  }
+  
+  .incorrect {
+    border: 3px solid red;
+    pointer-events: none;
+    text-decoration: line-through;
+  }
+  
+  .clear {
+    pointer-events: none;
+  }
+  
+  button,
+  button::after {
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  
+  button {
+    background: none;
+    border: 1px solid green;
+    border-radius: 5px;
+    /* color: green; */
+    display: block;
+    font-size: 1rem;
+    margin: 1rem auto;
+    position: relative;
+    /* text-transform: uppercase; */
+  }
+  
+  /* button::before,
+  button::after {
+    background: green;
+    content: '';
+    position: absolute;
+    z-index: -1;
+  } */
+/*   
+  button:hover {
+    color: #fff;
+  } */
+  
+  .next-btn::after {
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 0;
+  }
+  
+  .next-btn:hover:after {
+    width: 100%;
+  }
+  
+  /* animation */
+  .multiple-choices {
+    animation: pop-in 1s ease-out;
+  }
+  
+  @keyframes pop-in {
+    0% {
+      transform: scale(0) translateY(100px);
+      opacity: 0;
+    }
+  
+    50% {
+      transform: scale(1.05) translateY(-10px);
+      opacity: 1;
+    }
+  
+    100% {
+      transform: scale(1) translateY(0px);
+      opacity: 1;
+    }
+  }
+  
+  /* media queries */
+  @media only screen and (min-width: 320px) {
+    ol {
+      padding: 0 2rem;
+    }
+  }
+  
+  @media only screen and (min-width: 768px) {
+    ol {
+      padding: 0 10rem;
+    }
+    .next-btn {
+      font-size: 2rem;
+    }
+  }
+  
+  @media only screen and (min-width: 1200px) {
+    ol {
+      padding: 0 20rem;
+    }
+    .next-btn {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Progress Bar */
+  .progress-bar {
+    border: 1px solid;
+    margin: 1rem auto;
+    width: 75%;
+    height: 2rem;
+  }
+  .green {
+    background: rgb(175 180 175);
+  }
+  .red {
+    background: rgb(185 191 185);
+  }
+  
+  .option{
+    display: flex !important;
+    flex-direction:'row'; 
+    /* background: rgb(145, 141, 141); */
+  }
+
+  .option1{
+    min-width: 100px;
+    background: rgb(145, 141, 141);
+    margin-bottom: 5px;
+  }
